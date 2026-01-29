@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b8b8xysxcv3ny"]
+
+[ext_resource type="PackedScene" uid="uid://7l1irinimxa" path="res://addons/srcoder_simplecar/car.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://rjx8tx5y7j2p" path="res://addons/srcoder_simplecar/follow_camera.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dtyn8jrkvqywh" path="res://car_player.gd" id="2_lquwl"]
+[ext_resource type="Script" uid="uid://gqh5jywhm48i" path="res://addons/infinite_heightmap_terrain/infinite_terrain.gd" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cd0cwftw3owjy" path="res://new_noise_texture_2d.tres" id="4_1bvp3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_7dm0k"]
+sky = SubResource("Sky_ig7tw")
+ambient_light_source = 3
+ambient_light_color = Color(0.7319144, 0.80103743, 0.834577, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1bvp3"]
+frequency = 0.0005
+
+[sub_resource type="Curve" id="Curve_lquwl"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mycd"]
+diffuse_mode = 3
+specular_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_1bvp3")
+roughness_texture = ExtResource("4_1bvp3")
+
+[node name="Node3D" type="Node3D" unique_id=155645658]
+
+[node name="car" parent="." unique_id=1678856937 instance=ExtResource("1_0xm2m")]
+script = ExtResource("2_lquwl")
+is_overturned = true
+plane_vector = Vector3(0, 0, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=306888755]
+environment = SubResource("Environment_7dm0k")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1876434431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -8.126)
+use_collision = true
+size = Vector3(5000, 0.1, 5000)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=99980857]
+transform = Transform3D(0.9988154, -0.046489175, -0.014370385, 0.044948284, 0.7683609, 0.6384364, -0.018638745, -0.63832605, 0.76954037, 0, 12.1538925, 10.390653)
+shadow_enabled = true
+
+[node name="FollowCamera" parent="." unique_id=104611157 node_paths=PackedStringArray("follow_target") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3825173)
+follow_target = NodePath("../car")
+
+[node name="InfiniteTerrain" type="StaticBody3D" parent="." unique_id=269567667 node_paths=PackedStringArray("player")]
+script = ExtResource("3_h2yge")
+player = NodePath("../car")
+terrain_noise = SubResource("FastNoiseLite_1bvp3")
+mesh_resolution = 1.0
+terrain_height_multiplier = 50.0
+two_colors = false
+terrain_color_steepness_curve = SubResource("Curve_lquwl")
+terrain_level_color = Color(0.88827264, 0.89151627, 0.84256274, 1)
+terrain_material = SubResource("StandardMaterial3D_7mycd")
+enable_distant_terrain = false
+metadata/_custom_type_script = "uid://gqh5jywhm48i"

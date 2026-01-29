@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://g6da3y24qosl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dm0k"]
+albedo_color = Color(0.8547911, 0.18859601, 0.51025456, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_7dm0k"]
+sky = SubResource("Sky_ig7tw")
+ambient_light_source = 3
+ambient_light_color = Color(0.7319144, 0.80103743, 0.834577, 1)
+
+[node name="Node3D" type="Node3D" unique_id=155645658]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=110882168]
+transform = Transform3D(1, 0, 0, 0, 0.887719, 0.4603857, 0, -0.4603857, 0.887719, 0, 2.2783003, 3.7345629)
+
+[node name="VehicleBody3D" type="VehicleBody3D" parent="." unique_id=1020726899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7110555, 0)
+engine_force = 46.28
+brake = 4.34
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D" unique_id=1457048116]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="VehicleBody3D/CollisionShape3D" unique_id=124110746]
+material_override = SubResource("StandardMaterial3D_7dm0k")
+
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="VehicleBody3D" unique_id=2036163108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50767857, -0.19740087, 0.68427455)
+brake = 4.34
+
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="VehicleBody3D" unique_id=383426346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50767857, -0.20971835, -0.79382193)
+brake = 4.34
+
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="VehicleBody3D" unique_id=1748738735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50235385, -0.19740087, 0.68427455)
+brake = 4.34
+
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="VehicleBody3D" unique_id=895385623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50235385, -0.20971835, -0.79382193)
+brake = 4.34
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=306888755]
+environment = SubResource("Environment_7dm0k")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1876434431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, -8.126)
+use_collision = true
+size = Vector3(100, 0.1, 100)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=99980857]
+transform = Transform3D(1, 0, 0, 0, 0.15362395, 0.9881294, 0, -0.9881294, 0.15362395, 0, 12.1538925, 10.390653)
