@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dwonb1ir0s4k4"]
+
+[ext_resource type="PackedScene" uid="uid://ce4geerpo3naw" path="res://city/collision/building_garage.tscn" id="1_dlp02"]
+[ext_resource type="PackedScene" uid="uid://cqrtxwrbmsii1" path="res://city/collision/building_small_a.tscn" id="2_dj7bq"]
+[ext_resource type="PackedScene" uid="uid://f5ghw384xrbp" path="res://city/collision/building_small_b.tscn" id="3_oroex"]
+[ext_resource type="PackedScene" uid="uid://viwo5yuohbq5" path="res://city/collision/building_small_c.tscn" id="4_0spx5"]
+[ext_resource type="PackedScene" uid="uid://cqn0cxgfsh550" path="res://city/collision/building_small_d.tscn" id="5_iehk3"]
+[ext_resource type="PackedScene" uid="uid://c31xfsncjfnx0" path="res://city/collision/grass.tscn" id="6_8khpq"]
+[ext_resource type="PackedScene" uid="uid://bhjdo217bgq8q" path="res://city/collision/grass_trees.tscn" id="7_fhnp1"]
+[ext_resource type="PackedScene" uid="uid://cpucuhdy4gtq5" path="res://city/collision/grass_trees_tall.tscn" id="8_a3cpd"]
+[ext_resource type="PackedScene" uid="uid://c7ac66pa2h3me" path="res://city/collision/pavement.tscn" id="9_86g6u"]
+[ext_resource type="PackedScene" uid="uid://cjows70tei1jd" path="res://city/collision/pavement_fountain.tscn" id="10_ny8jq"]
+[ext_resource type="PackedScene" uid="uid://cbwllka14rgco" path="res://city/collision/road_corner.tscn" id="11_xg27v"]
+[ext_resource type="PackedScene" uid="uid://b5ofrpwmxo7ji" path="res://city/collision/road_intersection.tscn" id="12_55ei5"]
+[ext_resource type="PackedScene" uid="uid://duin3astw08ly" path="res://city/collision/road_split.tscn" id="13_2c50w"]
+[ext_resource type="PackedScene" uid="uid://c13a77ie8m72p" path="res://city/collision/road_straight.tscn" id="14_dg662"]
+[ext_resource type="PackedScene" uid="uid://dwede1bupusg0" path="res://city/collision/road_straight_lightposts.tscn" id="15_ambt6"]
+
+[node name="MeshLibrary" type="Node3D" unique_id=1022228168]
+
+[node name="building-garage" parent="." unique_id=24172353 instance=ExtResource("1_dlp02")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="building-small-a" parent="." unique_id=231567468 instance=ExtResource("2_dj7bq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="building-small-b" parent="." unique_id=1107269489 instance=ExtResource("3_oroex")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="building-small-c" parent="." unique_id=474717758 instance=ExtResource("4_0spx5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="building-small-d" parent="." unique_id=1903774550 instance=ExtResource("5_iehk3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="grass" parent="." unique_id=1191497194 instance=ExtResource("6_8khpq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="grass-trees" parent="." unique_id=546107267 instance=ExtResource("7_fhnp1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="grass-trees-tall" parent="." unique_id=1524669452 instance=ExtResource("8_a3cpd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="pavement" parent="." unique_id=503710359 instance=ExtResource("9_86g6u")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="pavement-fountain" parent="." unique_id=2060504788 instance=ExtResource("10_ny8jq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road-corner" parent="." unique_id=162730917 instance=ExtResource("11_xg27v")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road-intersection" parent="." unique_id=2030971752 instance=ExtResource("12_55ei5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road-split" parent="." unique_id=1532122033 instance=ExtResource("13_2c50w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road-straight" parent="." unique_id=674670167 instance=ExtResource("14_dg662")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="road-straight-lightposts" parent="." unique_id=1984993229 instance=ExtResource("15_ambt6")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

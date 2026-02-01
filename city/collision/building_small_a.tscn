@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cqrtxwrbmsii1"]
+
+[ext_resource type="PackedScene" uid="uid://cnycdi6t5tj01" path="res://city/models/building-small-a.glb" id="1_hvho3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hvho3"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.049936377, -0.5, 0.5, 0, -0.5, -0.5, 0.049936377, 0.5, 0.5, 0, 0.5, -0.47503915, 0.7999119, -0.35003915, -0.4208105, 0.949907, -0.4208105, -0.35003915, 0.949907, -0.4500783, 0.5, 0.049936377, -0.5, -0.30001956, 0.5249364, 0.47494125, -0.35003915, 0.949907, 0.44998044, -0.4208105, 0.949907, 0.42061472, -0.4500783, 0.949907, 0.34994125, -0.47503915, 0.7999119, -0.30001956, 0.5, 0.049936377, 0.5, -0.4500783, 0.949907, -0.35003915, 0.34994125, 0.949907, -0.4500783, 0.5, 0.6499168, -0.27662492, 0.42061472, 0.949907, -0.4208105, 0.44998044, 0.949907, -0.35003915, 0.2999217, 0.5249364, 0.47494125, 0.34994125, 0.949907, 0.44998044, 0.5, 0.6499168, -0.07654658, 0.44998044, 0.949907, 0.34994125, 0.42061472, 0.949907, 0.42061472)
+
+[node name="building-small-a" unique_id=231567468 instance=ExtResource("1_hvho3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="building-small-a2" parent_id_path=PackedInt32Array(680580874) index="0" unique_id=55168740]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building-small-a2/StaticBody3D" index="0" unique_id=1261995103]
+shape = SubResource("ConvexPolygonShape3D_hvho3")

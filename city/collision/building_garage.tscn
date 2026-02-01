@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ce4geerpo3naw"]
+
+[ext_resource type="PackedScene" uid="uid://d0nnrx2y4px2v" path="res://city/models/building-garage.glb" id="1_p022b"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p022b"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.049960848, -0.5, 0.5, 0, -0.5, -0.5, 0.049960848, 0.5, 0.5, 0, 0.5, -0.47503915, 0.39995596, -0.35003915, -0.4500783, 0.55, -0.35003915, -0.4208105, 0.55, -0.4208105, -0.35003915, 0.55, -0.4500783, 0.5, 0.049960848, -0.5, -0.35003915, 0.55, 0.44998044, -0.4208105, 0.55, 0.42061472, -0.4500783, 0.55, 0.34994125, -0.47503915, 0.39995596, -0.30001956, 0.5, 0.049960848, 0.5, 0.34994125, 0.55, -0.4500783, 0.42061472, 0.55, -0.4208105, 0.44998044, 0.55, -0.35003915, 0.34994125, 0.55, 0.44998044, 0.44998044, 0.55, 0.34994125, 0.42061472, 0.55, 0.42061472)
+
+[node name="building-garage" unique_id=24172353 instance=ExtResource("1_p022b")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="building-garage2" parent_id_path=PackedInt32Array(212369633) index="0" unique_id=1891579346]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building-garage2/StaticBody3D" index="0" unique_id=2019989862]
+shape = SubResource("ConvexPolygonShape3D_p022b")
