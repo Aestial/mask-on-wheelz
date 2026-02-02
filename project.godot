@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="mask-vs-mask"
+config/name="Mask on Wheelz"
+config/description="Global Game Jam 2026 entry with theme: Mask"
+config/version="0.1.0"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
